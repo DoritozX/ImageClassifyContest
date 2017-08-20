@@ -1,20 +1,20 @@
-def selectFolder():
+def selectFolder(title):
     import tkinter.filedialog as filedialog
     import tkinter as tk
 
     root = tk.Tk()
     root.withdraw()
-    folder =filedialog.askdirectory(parent = root, title = "Select the folder")
+    folder =filedialog.askdirectory(parent = root, title = title)
     return folder
 
-def selectFile():
+def selectFile(title):
     import tkinter.filedialog as filedialog
     import tkinter as tk
 
     root = tk.Tk()
     root.withdraw()
     fileList = []
-    filez = filedialog.askopenfiles(parent = root, title = 'Select the files')
+    filez = filedialog.askopenfiles(parent = root, title = title)
     for i, v in enumerate(filez):
         fileList.append(v.name)
     return fileList
