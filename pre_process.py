@@ -2,8 +2,8 @@ import tensorflow as tf
 import os
 import re
 from PIL import Image
-from module import *
-from module2 import *
+from module_base import *
+from module_tf import *
 
 trainFileList, classes, trainDir = readAllFilesWithTag()
 print("Please enter the file name of the binary data set:")

@@ -1,4 +1,4 @@
-def selectFolder(title):
+def selectFolder(title = "None"):
     import tkinter.filedialog as filedialog
     import tkinter as tk
 
@@ -7,7 +7,7 @@ def selectFolder(title):
     folder =filedialog.askdirectory(parent = root, title = title)
     return folder
 
-def selectFile(title):
+def selectFile(title = "None"):
     import tkinter.filedialog as filedialog
     import tkinter as tk
 
