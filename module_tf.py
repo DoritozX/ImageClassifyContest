@@ -111,6 +111,11 @@ def inputs(batchSize, numEpochs):
 
 def runTraining(images, sparseLabels):
     with tf.Graph().as_default():
-        logits = mnist.inference(images, FLAGS.hidden1, FLAGS.hidden2)
-        loss = mnist.loss(logits, sparseLabels)
+        FLAGS={'learning_rate':0.01,'max_steps':2000,'hidden1':128,'hidden2':32,'batch_size':100,
+       'input_data_dir':'MNIST_data/','log_dir':'logs_fully_connected_feed/','fake_data':False}
+
+        logits = module_mnist.inference(images, 128, 32)
+        loss = module_mnist.loss(logits, sparseLabels)
+
+        trainOp = module_mnist.training(loss, 0.01)
 
