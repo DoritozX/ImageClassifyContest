@@ -9,9 +9,9 @@ import datetime
 
 class ErrorLog :
     """
-     Usage£º
-? ? ? ? Define logger = ErrorLog(ErrorLog.rename()) in the first of function
-? ? ? ? And use logger.error("Error Messages") in exception process
+    Usage£º
+        Define logger = ErrorLog(ErrorLog.rename()) in the first of function
+        And use logger.error("Error Messages") in exception process
     """
 
     #The size limit of error log
